@@ -72,3 +72,40 @@
   <footer class="bg-stone-300 p-4 sm:p-6 text-center text-xs sm:text-sm text-gray-600 relative z-10">
     © 2025 NATÜRCORE. Todos os direitos reservados.
   </footer>
+
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imagem na Lateral Direita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .imagem-lateral {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 120px; /* Largura da imagem na lateral */
+      z-index: -1; /* Fica no fundo */
+      background-image: url('sua-imagem.png'); /* Substitua pelo caminho da sua imagem */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right top;
+    }
+  </style>
+</head>
+<body class="relative bg-white min-h-screen">
+
+  <!-- Imagem fixa à direita -->
+  <div class="imagem-lateral"></div>
+
+  <!-- Conteúdo principal -->
+  <main class="p-10 max-w-3xl">
+    <h1 class="text-4xl font-bold mb-4">Conteúdo do Site</h1>
+    <p class="mb-4">Aqui vai o conteúdo principal do seu site. A imagem estará fixa à direita da tela, do topo ao final.</p>
+    <p>Você pode adicionar mais conteúdo, rolar a página e a imagem continuará visível na lateral.</p>
+  </main>
+
+</body>
+</html>
