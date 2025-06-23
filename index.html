@@ -73,54 +73,39 @@
     © 2025 NATÜRCORE. Todos os direitos reservados.
   </footer>
 
-  <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Runas no Fundo</title>
-  <style>
+<style>
+  .runa-lateral {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    opacity: 0.9; /* mais visível */
+    z-index: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .runa-esquerda {
+    left: 0;
+    background-image: url('imagens/runa-valkyre-esquerda-preto.png'); /* imagem preta */
+  }
+  .runa-direita {
+    right: 0;
+    background-image: url('imagens/runa-valkyre-direita-preto.png'); /* imagem preta */
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
     .runa-lateral {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      width: 100px;
-      opacity: 0.1;
-      z-index: 0;
-      pointer-events: none;
-      background-color: rgba(255, 0, 0, 0.1); /* Só pra teste, pode tirar depois */
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      display: none;
     }
-    .runa-esquerda {
-      left: 0;
-      background-image: url('imagens/runa-valkyre-esquerda.png');
-    }
-    .runa-direita {
-      right: 0;
-      background-image: url('imagens/runa-valkyre-direita.png');
-    }
+  }
+</style>
 
-    body > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    @media (max-width: 768px) {
-      .runa-lateral {
-        display: none;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="runa-lateral runa-esquerda"></div>
-  <div class="runa-lateral runa-direita"></div>
-
-  <h1>Conteúdo do Site Aqui</h1>
-  <p>Teste de runas no fundo lateral.</p>
-
-</body>
-</html>
+<div class="runa-lateral runa-esquerda"></div>
+<div class="runa-lateral runa-direita"></div>
