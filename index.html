@@ -8,23 +8,22 @@
 </head>
 <body class="bg-stone-100 text-gray-800 font-sans relative overflow-x-hidden">
 
-  <!-- Cabeçalho -->
- <header class="bg-stone-200 p-4 sm:p-6 shadow-md relative z-10">
-  <div class="container mx-auto flex flex-wrap sm:flex-nowrap justify-between items-center">
-    <div class="flex items-center space-x-3">
-      <img src="logo-valkyre.png" alt="Logo Valkyre" class="w-10 sm:w-12 h-auto" />
-      <h1 class="text-2xl sm:text-3xl font-bold text-emerald-700">NATÜRCORE</h1>
+  <!-- Cabeçalho com logo -->
+  <header class="bg-stone-200 p-4 sm:p-6 shadow-md relative z-10">
+    <div class="container mx-auto flex flex-wrap sm:flex-nowrap justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="images/logo-valkyre.png" alt="Logo Valkyre" class="w-10 sm:w-12 h-auto" />
+        <h1 class="text-2xl sm:text-3xl font-bold text-emerald-700">NATÜRCORE</h1>
+      </div>
+      <nav class="w-full sm:w-auto">
+        <ul class="flex flex-col sm:flex-row sm:space-x-6 text-lg text-center">
+          <li><a href="#produto" class="hover:underline block py-1 sm:py-0">Produto</a></li>
+          <li><a href="#materiais" class="hover:underline block py-1 sm:py-0">Materiais</a></li>
+          <li><a href="#contato" class="hover:underline block py-1 sm:py-0">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="w-full sm:w-auto">
-      <ul class="flex flex-col sm:flex-row sm:space-x-6 text-lg text-center">
-        <li><a href="#produto" class="hover:underline block py-1 sm:py-0">Produto</a></li>
-        <li><a href="#materiais" class="hover:underline block py-1 sm:py-0">Materiais</a></li>
-        <li><a href="#contato" class="hover:underline block py-1 sm:py-0">Contato</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
+  </header>
 
   <!-- Banner Principal -->
   <section class="bg-emerald-100 py-16 sm:py-20 px-4 sm:px-0 text-center relative z-10">
@@ -73,31 +72,18 @@
     © 2025 NATÜRCORE. Todos os direitos reservados.
   </footer>
 
-  <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imagem na Lateral Direita</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .imagem-lateral {
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 120px; /* Largura da imagem na lateral */
-      z-index: -1; /* Fica no fundo */
-      background-image: url('runa-valkyre-direita.png'); /* Substitua pelo caminho da sua imagem */
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right top;
-    }
-  </style>
-</head>
-<body class="relative bg-white min-h-screen">
+  <!-- Adereços nórdicos no fundo -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/fabric-of-squares.png')] opacity-10"></div>
 
-  <!-- Imagem fixa à direita -->
-  <div class="runa-valkyre-direita.png"></div>
+    <svg class="absolute bottom-10 right-10 w-16 sm:w-24 h-16 sm:h-24 text-emerald-700 opacity-10" fill="none" viewBox="0 0 100 100" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M20 80 L50 20 L80 80" />
+    </svg>
 
+    <svg class="absolute top-10 left-10 w-12 sm:w-16 h-12 sm:h-16 text-emerald-500 opacity-10" fill="none" viewBox="0 0 100 100" stroke="currentColor">
+      <path stroke-linecap="round" stroke-width="3" d="M50 10 L50 90 M10 50 L90 50 M20 20 L80 80 M80 20 L20 80" />
+    </svg>
+  </div>
+
+</body>
 </html>
