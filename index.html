@@ -73,54 +73,54 @@
     © 2025 NATÜRCORE. Todos os direitos reservados.
   </footer>
 
-  <!-- Adereços nórdicos no fundo -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <div class="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/fabric-of-squares.png')] opacity-10"></div>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Runas no Fundo</title>
+  <style>
+    .runa-lateral {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      opacity: 0.1;
+      z-index: 0;
+      pointer-events: none;
+      background-color: rgba(255, 0, 0, 0.1); /* Só pra teste, pode tirar depois */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    .runa-esquerda {
+      left: 0;
+      background-image: url('imagens/runa-valkyre-esquerda.png');
+    }
+    .runa-direita {
+      right: 0;
+      background-image: url('imagens/runa-valkyre-direita.png');
+    }
 
-    <svg class="absolute bottom-10 right-10 w-16 sm:w-24 h-16 sm:h-24 text-emerald-700 opacity-10" fill="none" viewBox="0 0 100 100" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M20 80 L50 20 L80 80" />
-    </svg>
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
 
-    <svg class="absolute top-10 left-10 w-12 sm:w-16 h-12 sm:h-16 text-emerald-500 opacity-10" fill="none" viewBox="0 0 100 100" stroke="currentColor">
-      <path stroke-linecap="round" stroke-width="3" d="M50 10 L50 90 M10 50 L90 50 M20 20 L80 80 M80 20 L20 80" />
-    </svg>
-  </div>
+    @media (max-width: 768px) {
+      .runa-lateral {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="runa-lateral runa-esquerda"></div>
+  <div class="runa-lateral runa-direita"></div>
+
+  <h1>Conteúdo do Site Aqui</h1>
+  <p>Teste de runas no fundo lateral.</p>
 
 </body>
-
 </html>
-
-<style>
-  /* Faz as runas fixas nas laterais, ocupando toda a altura */
-  .runa-lateral {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    opacity: 0.1; /* Transparência para não atrapalhar leitura */
-    z-index: 0; /* Atrás do conteúdo */
-    pointer-events: none; /* Para não interferir em cliques */
-  }
-  .runa-esquerda {
-    left: 0;
-  }
-  .runa-direita {
-    right: 0;
-  }
-
-  /* Garante que o conteúdo fique acima das runas */
-  body > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Esconde as runas em telas pequenas */
-  @media (max-width: 768px) {
-    .runa-lateral {
-      display: none;
-    }
-  }
-</style>
-
-<img src="imagens/runa-valkyre-esquerda.png" class="runa-lateral runa-esquerda" alt="Runa Valkyre Esquerda" />
-<img src="imagens/runa-valkyre-direita.png" class="runa-lateral runa-direita" alt="Runa Valkyre Direita" />
