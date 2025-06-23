@@ -87,4 +87,28 @@
   </div>
 
 </body>
+
 </html>
+
+<style>
+.runa-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  opacity: 0.9;
+  z-index: 999;
+}
+.runa-esquerda {
+  left: 10px;
+}
+.runa-direita {
+  right: 10px;
+}
+@media (max-width: 768px) {
+  .runa-lateral { display: none; } /* Esconde em telas pequenas */
+}
+</style>
+
+<img src="imagens/runa-valkyre-esquerda.png" class="runa-lateral runa-esquerda" alt="Runa Valkyre Esquerda" />
+<img src="imagens/runa-valkyre-direita.png" class="runa-lateral runa-direita" alt="Runa Valkyre Direita" />
