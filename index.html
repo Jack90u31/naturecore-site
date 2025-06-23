@@ -91,23 +91,35 @@
 </html>
 
 <style>
-.runa-lateral {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100px;
-  opacity: 0.9;
-  z-index: 999;
-}
-.runa-esquerda {
-  left: 10px;
-}
-.runa-direita {
-  right: 10px;
-}
-@media (max-width: 768px) {
-  .runa-lateral { display: none; } /* Esconde em telas pequenas */
-}
+  /* Faz as runas fixas nas laterais, ocupando toda a altura */
+  .runa-lateral {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    opacity: 0.1; /* Transparência para não atrapalhar leitura */
+    z-index: 0; /* Atrás do conteúdo */
+    pointer-events: none; /* Para não interferir em cliques */
+  }
+  .runa-esquerda {
+    left: 0;
+  }
+  .runa-direita {
+    right: 0;
+  }
+
+  /* Garante que o conteúdo fique acima das runas */
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Esconde as runas em telas pequenas */
+  @media (max-width: 768px) {
+    .runa-lateral {
+      display: none;
+    }
+  }
 </style>
 
 <img src="imagens/runa-valkyre-esquerda.png" class="runa-lateral runa-esquerda" alt="Runa Valkyre Esquerda" />
